@@ -2,22 +2,25 @@ let result = rankedBalance(10, 4);
 
 function rankedBalance(victories, defeats){
     let balance = victories - defeats;
-    return balance;
+    let heroLevel = "";
+
+        if (balance <= 10){
+            heroLevel = "Iron";
+        }else if (balance >= 11 && result <= 20){
+           heroLevel = "Bronze";
+        }else if (balance >= 21 && result <= 50){
+            heroLevel = "Silver";
+        }else if (balance >= 51 && result <= 80){
+            heroLevel = "Gold";
+        }else if (balance >= 81 && result <= 90){
+            heroLevel = "Diamond";
+        }else if (balance >= 91 && result <= 100){
+           heroLevel = "Legendary";
+        }else{
+            heroLevel = "Immortal";
+        }
+    return `The hero Ranked Balance is ${balance} and the level is ${heroLevel}`;
+
 }
 
-if (result <= 10) {
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Iron");
-}
-else if (result >= 11 && result <= 20){
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Bronze");
-}else if (result >= 21 && result <= 50){
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Silver");
-}else if (result >= 51 && result <= 80){
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Gold");
-}else if (result >= 81 && result <= 90){
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Diamond");
-}else if (result >= 91 && result <= 100){
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Legendary");
-}else{
-    console.log("O Herói tem de saldo de vitórias " + result + " e está no nível de Immortal");
-}
+console.log (result);
